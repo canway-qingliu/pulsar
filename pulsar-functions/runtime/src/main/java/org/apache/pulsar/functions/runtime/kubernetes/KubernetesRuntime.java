@@ -850,7 +850,7 @@ public class KubernetesRuntime implements Runtime {
 
     private List<String> getDownloadCommand(String tenant, String namespace, String name, String userCodeFilePath) {
         log.info("getDownloadCommand authenticationEnabled:{} authConfig:{}, instanceConfig: {}",
-                authenticationEnabled, authConfig.toString(), instanceConfig.getFunctionAuthenticationSpec());
+                authenticationEnabled, authConfig, instanceConfig.getFunctionAuthenticationSpec());
 
         // add auth plugin and parameters if necessary
         if (authenticationEnabled && authConfig != null) {
